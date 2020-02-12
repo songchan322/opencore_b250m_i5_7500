@@ -1,0 +1,91 @@
+>>>>>>>>>>>>>2020-02-12 18:50>>>>>>>>>>>>>
+
+panic(cpu 2 caller 0xffffff7f9425e4a7): nvme: "Fatal error occurred. CSTS=0xffffffff US[1]=0x0 US[0]=0xca VID=0x8086 DID=0xf1a5
+. FW Revision= PSF100C\n"@/BuildRoot/Library/Caches/com.apple.xbs/Sources/IONVMeFamily/IONVMeFamily-470.80.1/IONVMeController.cpp:5258
+Backtrace (CPU 2), Frame : Return Address
+0xffffff92194a3ab0 : 0xffffff801133bb2b mach_kernel : _handle_debugger_trap + 0x47b
+0xffffff92194a3b00 : 0xffffff80114734d5 mach_kernel : _kdp_i386_trap + 0x155
+0xffffff92194a3b40 : 0xffffff8011464f4e mach_kernel : _kernel_trap + 0x4ee
+0xffffff92194a3b90 : 0xffffff80112e2a40 mach_kernel : _return_from_trap + 0xe0
+0xffffff92194a3bb0 : 0xffffff801133b217 mach_kernel : _DebuggerTrapWithState + 0x17
+0xffffff92194a3cb0 : 0xffffff801133b5fb mach_kernel : _panic_trap_to_debugger + 0x21b
+0xffffff92194a3d00 : 0xffffff8011ad2aa9 mach_kernel : _panic + 0x61
+0xffffff92194a3d70 : 0xffffff7f9425e4a7 com.apple.iokit.IONVMeFamily : __ZN16IONVMeController8PolledIOEhP18IOMemoryDescriptorjyy18IOPolledCompletionjPKhm.cold.1
+0xffffff92194a3d90 : 0xffffff7f9424947a com.apple.iokit.IONVMeFamily : __ZN16IONVMeController18RequestAsyncEventsEj
+0xffffff92194a3ef0 : 0xffffff7f9424965c com.apple.iokit.IONVMeFamily : __ZN16IONVMeController18systemWillShutdownEj + 0x110
+0xffffff92194a3f30 : 0xffffff8011aa7b3b mach_kernel : __ZN12PMHaltWorker4workEPS_ + 0x12b
+0xffffff92194a3f70 : 0xffffff8011aa7858 mach_kernel : __ZN12PMHaltWorker4mainEPvi + 0x58
+0xffffff92194a3fa0 : 0xffffff80112e213e mach_kernel : _call_continuation + 0x2e
+      Kernel Extensions in backtrace:
+         com.apple.iokit.IONVMeFamily(2.1)[6BD739D2-AAF2-36CA-AB08-1B84F0E860C2]@0xffffff7f9423b000->0xffffff7f9427dfff
+            dependency: com.apple.driver.AppleMobileFileIntegrity(1.0.5)[A243D030-19AC-30AA-AC70-6C786DF9E6CE]@0xffffff7f92393000
+            dependency: com.apple.iokit.IOPCIFamily(2.9)[ADD485B5-3EF8-37C4-B3C5-F86326E497A4]@0xffffff7f91d2f000
+            dependency: com.apple.driver.AppleEFINVRAM(2.1)[D1753114-1FE3-3849-A7FA-452EDAB62495]@0xffffff7f925fd000
+            dependency: com.apple.iokit.IOStorageFamily(2.1)[76CF8513-C8B7-3A6F-9717-6D3F65B298BB]@0xffffff7f91f0c000
+            dependency: com.apple.iokit.IOReportFamily(47)[988360A2-2E10-3014-A119-BE81BC045A10]@0xffffff7f920c8000
+
+BSD process name corresponding to current thread: kernel_task
+Boot args: -v keepsyms=1 alcid=1
+
+Mac OS version:
+19D76
+
+Kernel version:
+Darwin Kernel Version 19.3.0: Thu Jan  9 20:58:23 PST 2020; root:xnu-6153.81.5~1/RELEASE_X86_64
+Kernel UUID: A8DDE75C-CD97-3C37-B35D-1070CC50D2CE
+Kernel slide:     0x0000000011000000
+Kernel text base: 0xffffff8011200000
+__HIB  text base: 0xffffff8011100000
+System model name: iMac18,3 (Mac-BE088AF8C5EB4FA2)
+System shutdown begun: YES
+Panic diags file available: NO (0xe00002cd)
+
+System uptime in nanoseconds: 1314836829847
+
+
+
+>>>>>>>>>>>>>>>>>>>2020-02-12 19:46>>>>>>>>>>>>>>>>>>>>
+
+panic(cpu 3 caller 0xffffff7f987b04a7): nvme: "Fatal error occurred. CSTS=0xffffffff US[1]=0x0 US[0]=0xca VID=0x8086 DID=0xf1a5
+. FW Revision= PSF100C\n"@/BuildRoot/Library/Caches/com.apple.xbs/Sources/IONVMeFamily/IONVMeFamily-470.80.1/IONVMeController.cpp:5258
+Backtrace (CPU 3), Frame : Return Address
+0xffffff820357bab0 : 0xffffff801513bb2b mach_kernel : _handle_debugger_trap + 0x47b
+0xffffff820357bb00 : 0xffffff80152734d5 mach_kernel : _kdp_i386_trap + 0x155
+0xffffff820357bb40 : 0xffffff8015264f4e mach_kernel : _kernel_trap + 0x4ee
+0xffffff820357bb90 : 0xffffff80150e2a40 mach_kernel : _return_from_trap + 0xe0
+0xffffff820357bbb0 : 0xffffff801513b217 mach_kernel : _DebuggerTrapWithState + 0x17
+0xffffff820357bcb0 : 0xffffff801513b5fb mach_kernel : _panic_trap_to_debugger + 0x21b
+0xffffff820357bd00 : 0xffffff80158d2aa9 mach_kernel : _panic + 0x61
+0xffffff820357bd70 : 0xffffff7f987b04a7 com.apple.iokit.IONVMeFamily : __ZN16IONVMeController8PolledIOEhP18IOMemoryDescriptorjyy18IOPolledCompletionjPKhm.cold.1
+0xffffff820357bd90 : 0xffffff7f9879b47a com.apple.iokit.IONVMeFamily : __ZN16IONVMeController18RequestAsyncEventsEj
+0xffffff820357bef0 : 0xffffff7f9879b65c com.apple.iokit.IONVMeFamily : __ZN16IONVMeController18systemWillShutdownEj + 0x110
+0xffffff820357bf30 : 0xffffff80158a7b3b mach_kernel : __ZN12PMHaltWorker4workEPS_ + 0x12b
+0xffffff820357bf70 : 0xffffff80158a7858 mach_kernel : __ZN12PMHaltWorker4mainEPvi + 0x58
+0xffffff820357bfa0 : 0xffffff80150e213e mach_kernel : _call_continuation + 0x2e
+      Kernel Extensions in backtrace:
+         com.apple.iokit.IONVMeFamily(2.1)[6BD739D2-AAF2-36CA-AB08-1B84F0E860C2]@0xffffff7f9878d000->0xffffff7f987cffff
+            dependency: com.apple.driver.AppleMobileFileIntegrity(1.0.5)[A243D030-19AC-30AA-AC70-6C786DF9E6CE]@0xffffff7f95df1000
+            dependency: com.apple.iokit.IOPCIFamily(2.9)[ADD485B5-3EF8-37C4-B3C5-F86326E497A4]@0xffffff7f95ea6000
+            dependency: com.apple.driver.AppleEFINVRAM(2.1)[D1753114-1FE3-3849-A7FA-452EDAB62495]@0xffffff7f96098000
+            dependency: com.apple.iokit.IOStorageFamily(2.1)[76CF8513-C8B7-3A6F-9717-6D3F65B298BB]@0xffffff7f95a65000
+            dependency: com.apple.iokit.IOReportFamily(47)[988360A2-2E10-3014-A119-BE81BC045A10]@0xffffff7f95a9f000
+
+BSD process name corresponding to current thread: kernel_task
+Boot args: keepsyms=1 alcid=1
+
+Mac OS version:
+19D76
+
+Kernel version:
+Darwin Kernel Version 19.3.0: Thu Jan  9 20:58:23 PST 2020; root:xnu-6153.81.5~1/RELEASE_X86_64
+Kernel UUID: A8DDE75C-CD97-3C37-B35D-1070CC50D2CE
+Kernel slide:     0x0000000014e00000
+Kernel text base: 0xffffff8015000000
+__HIB  text base: 0xffffff8014f00000
+System model name: iMac18,3 (Mac-BE088AF8C5EB4FA2)
+System shutdown begun: YES
+Panic diags file available: NO (0xe00002cd)
+
+System uptime in nanoseconds: 77680824183
+
+
