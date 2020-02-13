@@ -20,4 +20,6 @@
 
 
 ## 存在的问题
-随机kernal panic，报错 `nvme: "Fatal error occurred. CSTS=0xffffffff US[1]=0x0 US[0]=0xca VID=0x8086 DID=0xf1a5`，暂时没找到解药
+随机kernal panic，报错 `nvme: "Fatal error occurred. CSTS=0xffffffff US[1]=0x0 US[0]=0xca VID=0x8086 DID=0xf1a5`，暂时没找到解药。
+
+2020-02-13 可能是硬件兼容性问题，换了sm963之后，暂时没有出现问题
